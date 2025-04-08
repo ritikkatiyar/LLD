@@ -1,3 +1,3 @@
 public enum Status {
-    IDLE,MOVING
+    IDLE,MOVING,STOPPED
 }
