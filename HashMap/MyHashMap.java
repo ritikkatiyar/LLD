@@ -30,4 +30,36 @@ public class MyHashMap <K,V>{
             value=v;
         }
     }
+    public void put(K key,V value){
+        int hashCode=key.hashCode()%hashTable.length;
+        Entry node=hashTable[hashCode];
+
+        if(node==null){
+            Entry newNode=new Entry(key,value);
+            hashTable[hashCode]=newNode;
+        }else{
+            Entry previousNode=node;
+            while(node !=null){
+                if(node.key==key){
+                    node.value=value;
+                    return;
+                }
+                previousNode=node;
+                node=node.next;
+            }
+            Entry newNode=new Entry(key,value);
+            previousNode.next=newNode;
+        }
+    }
+    public V get(K key){
+        int hasCode=key.hashCode()%hashTable.length;
+        Entry node=hashTable[hasCode];
+        while(node!=null){
+            if(node.key.equals(key)){
+                return (V)node.value;
+            }
+            node=node.next;
+        }
+        return null;
+    }
 }
