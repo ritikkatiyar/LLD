@@ -25,5 +25,8 @@ public class MovieController {
         }
         return null;
     }
+    List<Movie> getMovieByCity(City city){
+        return cityMovieMap.get(city);
+    }
 }
 

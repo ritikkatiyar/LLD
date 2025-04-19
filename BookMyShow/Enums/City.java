@@ -1,4 +1,5 @@
 package Enums;
 
-public interface City {
+public enum City {
+    Bangalore,Delhi
 }
