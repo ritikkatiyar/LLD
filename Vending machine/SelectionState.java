@@ -1,9 +1,6 @@
 import java.util.List;
 
-public class HasMoneyState implements State{
-    public HasMoneyState(){
-        System.out.println("currently vending machine is in hasMoneyState");
-    }
+public class SelectionState implements State{
     @Override
     public void clickOnInsertCoinButton(VendingMachine vendingMachine) throws Exception {
 
@@ -11,6 +8,7 @@ public class HasMoneyState implements State{
 
     @Override
     public void clickOnStartProductSelectionButton(VendingMachine vendingMachine) throws Exception {
+
     }
 
     @Override
@@ -20,7 +18,7 @@ public class HasMoneyState implements State{
 
     @Override
     public void chooseProduct(VendingMachine machine, int codeNumber) throws Exception {
-        throw new Exception("you need to click on start product selection button first");
+
     }
 
     @Override
@@ -30,7 +28,7 @@ public class HasMoneyState implements State{
 
     @Override
     public Item dispenseProduct(VendingMachine vendingMachine, int codeNumber) throws Exception {
-        throw new Exception("product cannot be dispanced in hasMoney state");
+        return null;
     }
 
     @Override
