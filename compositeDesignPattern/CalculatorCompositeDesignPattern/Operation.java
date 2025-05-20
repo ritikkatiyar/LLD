@@ -1,4 +1,5 @@
 package CalculatorCompositeDesignPattern;
 
-public class Operation {
+public enum Operation {
+    ADD,SUBSTRACT,DIVIDE,MULTIPLY
 }
