@@ -13,7 +13,8 @@ public class User {
     public String getUserId(){
         return userId;
     }
-    public UserExpenseBalanceSheet userExpenseBalanceSheet(){
+
+    public UserExpenseBalanceSheet getUserExpenseBalanceSheet() {
         return userExpenseBalanceSheet;
     }
 }
