@@ -7,7 +7,7 @@ public class ExternalButton {
         this.direction=direction;
     }
     public ExternalRequest press(){
-        System.out.println("Enternal button pressed at floor "+floor+" going "+direction);
+        System.out.println("External button pressed at floor "+floor+" going "+direction);
         return new ExternalRequest(floor,direction);
     }
 }
