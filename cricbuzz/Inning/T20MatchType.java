@@ -1,4 +1,16 @@
 package Inning;
+public class T20MatchType implements MatchType{
 
-public class T20MatchType {
+    @Override
+    public int noOfOvers() {
+        return 20;
+    }
+
+    @Override
+    public int maxOverCountBowlers() {
+        return 5;
+    }
+
+
 }
+
