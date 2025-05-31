@@ -28,4 +28,8 @@ public class PlayerBowlingController {
 
         }
     }
+    public PlayerDetails getCurrentBowler(){
+        return currentBowler;
+    }
+
 }

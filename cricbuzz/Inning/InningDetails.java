@@ -24,6 +24,13 @@ public class InningDetails {
         }catch (Exception e){
             e.printStackTrace();
         }
+        int noOfOvers=matchType.noOfOvers();
+        for(int overNumber=1;overNumber<=noOfOvers;overNumber++){
+            //choose bowler
+            bowlingTeam.chooseNextBowler(matchType.maxOverCountBowlers());
+
+            OverDetails over=new OverDetails();
+        }
     }
 
 }
