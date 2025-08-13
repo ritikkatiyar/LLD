@@ -15,19 +15,31 @@ import java.util.*;
  *     }
  * }
  */
-class OrderPair {
-    TreeNode node;
-    int vertical;
-    int level;
 
-    OrderPair(TreeNode node, int vertical, int level) {
-        this.node = node;
-        this.vertical = vertical;
-        this.level = level;
-    }
-}
 
 public class VerticalOrderTraversalOfABinaryTree {
+    private class TreeNode{
+        int data;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int data){
+            this.data = data;
+            left=null;
+            right=null;
+        }
+    }
+    class OrderPair {
+        TreeNode node;
+        int vertical;
+        int level;
+
+        OrderPair(TreeNode node, int vertical, int level) {
+            this.node = node;
+            this.vertical = vertical;
+            this.level = level;
+        }
+    }
+
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         Queue<OrderPair> q = new LinkedList<>();

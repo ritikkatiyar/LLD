@@ -2,6 +2,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 class LRUCache {
+    private class Node {
+        int key;
+        int value;
+        Node next;
+        Node prev;
+
+        public Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public Node() {
+            // default constructor for dummy head/tail
+        }
+    }
+
     Map<Integer, Node> cacheMap;
     int capacity;
     Node head;
@@ -58,18 +74,4 @@ class LRUCache {
     }
 }
 
-class Node {
-    int key;
-    int value;
-    Node next;
-    Node prev;
 
-    public Node(int key, int value) {
-        this.key = key;
-        this.value = value;
-    }
-
-    public Node() {
-        // default constructor for dummy head/tail
-    }
-}

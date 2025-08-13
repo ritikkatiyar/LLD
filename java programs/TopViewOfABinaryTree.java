@@ -2,29 +2,30 @@ import java.util.*;
 
 import java.util.ArrayList;
 
-class TreeNode{
-    int data;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int data){
-        this.data = data;
-        left=null;
-        right=null;
-    }
-}
 
-class Pair{
-    TreeNode node;
-    int hd;
-    Pair(TreeNode node,int hd){
-        this.node=node;
-        this.hd=hd;
-    }
-}
 class TopViewOfABinaryTree {
+    private class TreeNode{
+        int data;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int data){
+            this.data = data;
+            left=null;
+            right=null;
+        }
+    }
+
+    class Pair{
+        TreeNode node;
+        int hd;
+        Pair(TreeNode node,int hd){
+            this.node=node;
+            this.hd=hd;
+        }
+    }
     // Function to return a list of nodes visible from the top view
     // from left to right in Binary Tree.
-    static ArrayList<Integer> topView(TreeNode root) {
+     ArrayList<Integer> topView(TreeNode root) {
         // code here
         ArrayList<Integer> result=new ArrayList<>();
         Queue<Pair> q=new LinkedList<>();

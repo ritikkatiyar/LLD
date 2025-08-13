@@ -4,6 +4,16 @@ import java.util.List;
 import java.util.Queue;
 
 public class ZigZagTraversalOrder {
+    private class TreeNode{
+        int data;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int data){
+            this.data = data;
+            left=null;
+            right=null;
+        }
+    }
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {

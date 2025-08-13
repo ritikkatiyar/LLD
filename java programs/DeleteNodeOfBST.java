@@ -1,5 +1,15 @@
 
 public class DeleteNodeOfBST {
+    private class TreeNode{
+        int data;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int data){
+            this.data = data;
+            left=null;
+            right=null;
+        }
+    }
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return null;

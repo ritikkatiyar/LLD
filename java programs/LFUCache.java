@@ -1,6 +1,29 @@
 import java.util.*;
 
 class LFUCache {
+    class Node1 {
+        int key;
+        int value;
+        int count;
+
+        public Node1(int key, int value) {
+            this.key = key;
+            this.value = value;
+            this.count = 1; // start with frequency 1
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (!(o instanceof Node1)) return false;
+            return this.key == ((Node1) o).key;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(key);
+        }
+    }
+    
     private Map<Integer, Node1> cacheMap;
     private Map<Integer, LinkedHashSet<Node1>> freqMap;
     private int capacity;
@@ -59,25 +82,4 @@ class LFUCache {
     }
 }
 
-class Node1 {
-    int key;
-    int value;
-    int count;
 
-    public Node1(int key, int value) {
-        this.key = key;
-        this.value = value;
-        this.count = 1; // start with frequency 1
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Node1)) return false;
-        return this.key == ((Node1) o).key;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(key);
-    }
-}
