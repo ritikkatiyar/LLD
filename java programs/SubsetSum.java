@@ -37,5 +37,16 @@ public class SubsetSum {
         dp[index][sum] = (take || notTake) ? 1 : 0;
         return take || notTake;
     }
+
+
+    public static void main(String[] args) {
+        SubsetSum subsetSum = new SubsetSum();
+
+        int[] nums1 = {1, 5, 11, 5};
+        System.out.println("Can partition {1,5,11,5}? " + subsetSum.canPartition(nums1));
+
+    }
+
 }
+
 
