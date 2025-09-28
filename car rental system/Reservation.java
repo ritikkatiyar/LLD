@@ -6,6 +6,9 @@ public class Reservation {
     private LocalDate startDate;
     private LocalDate endDate;
     private Customer customer;
+    Location pickUpLocation;
+    Location dropLocation;
+    ReservationStatus status;
 
     public Reservation(int reservationId, Vehicle vehicle, LocalDate startDate, LocalDate endDate, Customer customer) {
         this.reservationId = reservationId;

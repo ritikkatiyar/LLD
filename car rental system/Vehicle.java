@@ -1,7 +1,19 @@
+import java.util.Date;
+
 public class Vehicle {
     private int id;
     private VehicleType vehicleType;
     private VehicleStatus vehicleStatus;
+    private String companyName;
+    private String modelName;
+    int kmDriven;
+    Date manufacturingDate;
+    int avg;
+    int cc;
+    int dailyRentalCost;
+    int hourlyRentalCost;
+    int noOfSeats;
+
 
     public Vehicle(int id,VehicleType vehicleType,VehicleStatus vehicleStatus){
         this.id=id;
