@@ -32,4 +32,11 @@ public class Inventory {
             }
         }
     }
+
+    public void updateSoldOutItem(int codeNumber) {
+    }
+
+    public Item getItem(int codeNumber) {
+        return new Item();
+    }
 }

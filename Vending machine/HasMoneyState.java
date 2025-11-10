@@ -6,16 +6,18 @@ public class HasMoneyState implements State{
     }
     @Override
     public void clickOnInsertCoinButton(VendingMachine vendingMachine) throws Exception {
-
+        return;
     }
 
     @Override
     public void clickOnStartProductSelectionButton(VendingMachine vendingMachine) throws Exception {
+        vendingMachine.setVendingMachineState(new SelectionState());
     }
 
     @Override
     public void insertCoin(VendingMachine vendingMachine, Coin coin) throws Exception {
-
+        System.out.println("Accepted the coin");
+        vendingMachine.getCoinList().add(coin);
     }
 
     @Override
@@ -25,7 +27,7 @@ public class HasMoneyState implements State{
 
     @Override
     public int getChange(int returnChangeMoney) throws Exception {
-        return 0;
+        throw new Exception("you cannot get refund in hasmoney state");
     }
 
     @Override
@@ -35,7 +37,9 @@ public class HasMoneyState implements State{
 
     @Override
     public List<Coin> refundFullMoney(VendingMachine vendingMachine) throws Exception {
-        return List.of();
+        System.out.println("Retured the full amount back in the Coin dispense tray");
+        vendingMachine.setVendingMachineState(new IdleState(vendingMachine));
+        return vendingMachine.getCoinList();
     }
 
     @Override

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class IdleState implements State{
@@ -6,12 +7,12 @@ public class IdleState implements State{
     }
     public IdleState(VendingMachine vendingMachine){
         System.out.println("Currently vending machine is in idle state");
-
+        vendingMachine.setCoinList(new ArrayList<>());
     }
 
     @Override
     public void clickOnInsertCoinButton(VendingMachine vendingMachine) throws Exception {
-
+        vendingMachine.setVendingMachineState(new HasMoneyState());
     }
 
     @Override
@@ -46,6 +47,6 @@ public class IdleState implements State{
 
     @Override
     public void updateInventory(VendingMachine vendingMachine, Item item, int codeNumber) throws Exception {
-
+        vendingMachine.getInventory.addItem(item,codeNumber);
     }
 }
