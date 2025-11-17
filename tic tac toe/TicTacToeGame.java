@@ -13,10 +13,10 @@ public class TicTacToeGame {
     public void initializeGame(){
         //creating two players
         players=new LinkedList<>();
-        PlayingPieceX crossPiece=new PlayingPieceX();
+        PlayingPiece crossPiece=new PlayingPieceX();
         Player player1=new Player("player1",crossPiece);
 
-        PlayingPieceO noughtsPiece=new PlayingPieceO();
+        PlayingPiece noughtsPiece=new PlayingPieceO();
         Player player2=new Player("player2",noughtsPiece);
 
         players.add(player1);

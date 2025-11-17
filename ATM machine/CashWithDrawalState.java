@@ -15,7 +15,7 @@ public class CashWithDrawalState extends ATMState{
 
             //using the chain of responsibilty for the logic
             CashWithdrawalProcessor withdrawalProcessor=new TwoThousandWithrawProcessor(
-                    new FiveHundredWithdrawalProcessor(new OneHundredWithdrawalProcessor(n)));
+                    new FiveHundredWithdrawalProcessor(new OneHundredWithdrawalProcessor(null)));
             withdrawalProcessor.withdraw(atm,withdrawalAmountRequest);
             exit(atm);
 

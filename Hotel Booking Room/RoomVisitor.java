@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
+public interface RoomVisitor {
 
-public class RoomVisitor {
+    public void visit(SingleRoom singleRoomObj);
+    public void visit(DoubleRoom doubleRoomObj);
 }

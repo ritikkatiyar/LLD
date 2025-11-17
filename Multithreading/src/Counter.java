@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+public class Counter extends Thread{
+    int counter;
 
-public class Counter {
+    public void incrementCounter(){
+        counter++;
+        System.out.println("counter is "+counter);
+    }
+    @Override
+    public void run() {
+        incrementCounter();
+    }
 }

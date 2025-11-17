@@ -6,7 +6,8 @@ public class ParkingService {
     private final ParkingSpotManager parkingSpotManager;
     private final FareCalculationStrategy fareCalculationStrategy;
 
-    public ParkingService(ParkingLot parkingLot, ParkingSpotManager parkingSpotManager, FareCalculationStrategy fareCalculationStrategy) {
+    public ParkingService(ParkingLot parkingLot, ParkingSpotManager parkingSpotManager,
+                          FareCalculationStrategy fareCalculationStrategy) {
         this.parkingLot = parkingLot;
         this.parkingSpotManager = parkingSpotManager;
         this.fareCalculationStrategy = fareCalculationStrategy;

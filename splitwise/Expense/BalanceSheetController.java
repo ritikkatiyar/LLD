@@ -43,9 +43,13 @@ public class BalanceSheetController {
                 }
                 else{
                     userPaidBalance=new Balance();
-
+                    oweUserExpenseSheet.getUserVsBalance().put(expesnsePaidBy.getUserId(),userPaidBalance);
                 }
+                userPaidBalance.setAmountOwe(userPaidBalance.getAmountOwe()+oweAmount);
             }
         }
+    }
+    public void showBalanceSheetOfUser(User user){
+
     }
 }

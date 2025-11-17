@@ -1,6 +1,6 @@
 public class SelectOperationState extends ATMState{
     public SelectOperationState(){
-        showOperationState();
+        showOperations();
     }
     @Override
     public void selectOperation(ATM atm,Card card,TransactionType transactionType){
@@ -27,7 +27,8 @@ public class SelectOperationState extends ATMState{
     public void returnCard(){
         System.out.println("Please select your card");
     }
-    private void showOperationState(){
-        System.out.println("please ");
+    private void showOperations(){
+        System.out.println("please select the operation");
+        TransactionType.showAllTransactionsTypes();
     }
 }

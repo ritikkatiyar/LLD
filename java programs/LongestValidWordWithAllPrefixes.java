@@ -25,9 +25,10 @@ public class LongestValidWordWithAllPrefixes {
                 crawler = crawler.children[index];
             }
 
-            crawler.isEnd = true;
+
 
             if (valid) {
+                crawler.isEnd = true;
                 if (word.length() > longest.length() ||
                         (word.length() == longest.length() && word.compareTo(longest) < 0)) {
                     longest = word;
