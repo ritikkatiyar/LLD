@@ -8,6 +8,6 @@ public class RoomPricingVisitor implements RoomVisitor{
     @Override
     public void visit(DoubleRoom doubleRoomObj) {
         System.out.println("Pricing computation logic of DoubleRoom");
-        doubleRoomObj.room0Price=2000;
+        doubleRoomObj.roomPrice=2000;
     }
 }

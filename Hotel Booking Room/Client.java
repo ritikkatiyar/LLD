@@ -7,5 +7,12 @@ public class Client {
         RoomPricingVisitor pricingVisitor=new RoomPricingVisitor();
         singleRoomObj.accept(pricingVisitor);
         System.out.println(((SingleRoom)singleRoomObj).roomPrice);
+
+        doubleRoomObj.accept(pricingVisitor);
+        System.out.println(((DoubleRoom)doubleRoomObj).roomPrice);
+
+        //performing another operation on the objects
+        RoomMaintenanceVisitor maintenanceVisitor=new RoomMaintenanceVisitor();
+        singleRoomObj.accept(maintenanceVisitor);
     }
 }
